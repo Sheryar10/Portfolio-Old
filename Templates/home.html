@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'home-style.css' %}" />
+    <!-- <link rel="stylesheet" href="{% static 'css\bootstrap.min.css' %}" /> -->
+    <title>Sheryar Saghir</title>
+  </head>
+  <body>
+    <div id="home" class="parent background">
+      <div class="nav">
+        <!-- <h1>Sheryar Saghir</h1> -->
+        <a href="#home"
+          ><img src="{% static 'Portfolio-Logo-2.png' %}" alt=""
+        /></a>
+        <ul>
+          <li>
+            <a href="#home">Home</a>
+            <div class="line"></div>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+            <div class="line"></div>
+          </li>
+          <li>
+            <a href="#about">About</a>
+            <div class="line"></div>
+          </li>
+          <li>
+            <a href="#contact">Contact Me</a>
+            <div class="line"></div>
+          </li>
+        </ul>
+        <!-- <div class="backdrop">
+          <img
+          src="{% static 'multicolored-abstract-painting-1509534.jpg' %}"
+          alt=""
+          />
+        </div> -->
+      </div>
+      <div class="intro">
+        <h4>I'm a <span id="typed"></span></h4>
+        <h2>Sheryar Saghir</h2>
+      </div>
+    </div>
+
+    <div id="projects" class="content">
+      <div class="heading">
+        <h2>My Projects</h2>
+      </div>
+      <div class="container">
+        <div class="card">
+          <h3 class="title">Protein Mass Calculator</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+          <div class="details">
+            <p>
+              This is an app that calculates protein mass by evaluating a string
+              of protein which consists of a sequence of amino acids.
+            </p>
+          </div>
+          <div class="animated-button animated-button-opacity">
+            <a href="/amino" target="_blank"><span>Check it out</span></a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="title">Protein Mass Calculator</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+          <div class="details">
+            <p>
+              This is an app that calculates protein mass by evaluating a string
+              of protein which consists of a sequence of amino acids.
+            </p>
+          </div>
+          <div class="animated-button animated-button-opacity">
+            <a href="/amino" target="_blank"><span>Check it out</span></a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="title">Protein Mass Calculator</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+          <div class="details">
+            <p>
+              This is an app that calculates protein mass by evaluating a string
+              of protein which consists of a sequence of amino acids.
+            </p>
+          </div>
+          <div class="animated-button animated-button-opacity">
+            <a href="/amino" target="_blank"><span>Check it out</span></a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="title">Protein Mass Calculator</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+          <div class="details">
+            <p>
+              This is an app that calculates protein mass by evaluating a string
+              of protein which consists of a sequence of amino acids.
+            </p>
+          </div>
+          <div class="animated-button animated-button-opacity">
+            <a href="/amino" target="_blank"><span>Check it out</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about">
+      <h1>About Me</h1>
+      <p>
+        Hi, this is Sheryar Saghir and I am a computer science student. I am
+        from Pakistan and I love doing what I do. I am working on to become a
+        professional web developer, front-end for now, and also expand my
+        portfolio by creating web applications using modern frameworks. This
+        website on which you are currently on, is made using Django framework.
+      </p>
+    </div>
+
+    <div id="contact" class="contact">
+      <div class="left-pane">
+        <h2>Contact Me</h2>
+        <div class="underline"></div>
+      </div>
+      <form class="form-input-wrapper" method="POST">
+        {% csrf_token %} {{form|crispy}}
+        <input class="submit-button" type="submit" value="Save" />
+      </form>
+    </div>
+
+    <div class="footer">
+      <h4>
+        Made with <ion-icon name="heart"></ion-icon> by
+        <a href="">Sheryar Saghir</a>
+      </h4>
+      <h4>© Copyright 2020</h4>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="{% static 'typed.min.js' %}"></script>
+    <script src="{% static 'app.js' %}"></script>
+  </body>
+</html>

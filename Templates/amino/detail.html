@@ -1,0 +1,151 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static '/amino/style.css' %}" />
+    <title>Protein Mass Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        {% if amino_list %} 
+            {% for i in amino_list %} {{i.amino_name}} {{i.three_letter_symbol}} {% endfor %}
+        {% endif %}
+
+        <h2>Protein Mass Calculator</h2>
+        <div class="form">
+          <form action="">
+            <input
+              name="inputString"
+              id="inputString"
+              type="text"
+              size="50"
+              oninput="getValue()"
+              autocomplete="off"
+            />
+            <label for=""><span class="content">Your Protein</span></label>
+          </form>
+        </div>
+        <div class="result">
+          <h3>Total Mass:</h3>
+          <h3 id="totalWeight">0</h3>
+        </div>
+      </div>
+    </div>
+    <div class="info-tab" id="info-tab">
+      <div class="icons">
+        <img
+          id="info-image"
+          src="{% static '/amino/info-icon.svg' %}"
+          width="35px"
+          height="35px"
+          alt=""
+        />
+        <img
+          id="info-image-close"
+          src="{% static '/amino/info-icon-close.svg' %}"
+          width="20px"
+          height="20px"
+          alt=""
+        />
+      </div>
+      <div>
+        <div class="yellow-square"></div>
+        <h4 class="yellow">G - Glycine</h4>
+      </div>
+      <div>
+        <div class="yellow-square"></div>
+        <h4 class="yellow">A - Alanine</h4>
+      </div>
+      <div>
+        <div class="yellow-square"></div>
+        <h4 class="yellow">V - Valine</h4>
+      </div>
+      <div>
+        <div class="yellow-square"></div>
+        <h4 class="yellow">C - Cysteine</h4>
+      </div>
+      <div>
+        <div class="yellow-square"></div>
+        <h4 class="yellow">P - Proline</h4>
+      </div>
+      <div>
+        <div class="yellow-square"></div>
+        <h4 class="yellow">L - Leucine</h4>
+      </div>
+      <div>
+        <div class="yellow-square"></div>
+        <h4 class="yellow">I - Isoleucine</h4>
+      </div>
+      <div>
+        <div class="yellow-square"></div>
+        <h4 class="yellow">M - Methionine</h4>
+      </div>
+      <div>
+        <div class="yellow-square"></div>
+        <h4 class="yellow">W - Tryptophan</h4>
+      </div>
+      <div>
+        <div class="yellow-square"></div>
+        <h4 class="yellow">F - Phenylalanine</h4>
+      </div>
+      <div>
+        <div class="light-blue-square"></div>
+        <h4 class="light-blue">S - Serine</h4>
+      </div>
+      <div>
+        <div class="light-blue-square"></div>
+        <h4 class="light-blue">T - Threonine</h4>
+      </div>
+      <div>
+        <div class="light-blue-square"></div>
+        <h4 class="light-blue">Y - Tyrosine</h4>
+      </div>
+      <div>
+        <div class="light-blue-square"></div>
+        <h4 class="light-blue">N - Asparagine</h4>
+      </div>
+      <div>
+        <div class="light-blue-square"></div>
+        <h4 class="light-blue">Q - Glutamine</h4>
+      </div>
+      <div>
+        <div class="green-square"></div>
+        <h4 class="green">K - Lysine</h4>
+      </div>
+      <div>
+        <div class="green-square"></div>
+        <h4 class="green">R - Arginine</h4>
+      </div>
+      <div>
+        <div class="green-square"></div>
+        <h4 class="green">H - Histidine</h4>
+      </div>
+      <div>
+        <div class="purple-square"></div>
+        <h4 class="purple">D - Aspartic Acid</h4>
+      </div>
+      <div>
+        <div class="purple-square"></div>
+        <h4 class="purple">E - Glutamic Acid</h4>
+      </div>
+    </div>
+
+    <script src="{% static '/amino/app.js' %}"></script>
+
+    <div class="footer">
+      <ul>
+        <li><p>Made by Sheryar Saghir</p></li>
+        <li><p>😎</p></li>
+      </ul>
+    </div>
+  </body>
+</html>
