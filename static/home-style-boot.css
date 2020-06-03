@@ -1,0 +1,485 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(31, 31, 31);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 120px;
+}
+
+nav a {
+  position: relative;
+  display: inline-flex;
+  margin: 25px 40px;
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  font-size: 20px;
+}
+
+nav a:hover,
+nav a:focus {
+  outline: none;
+}
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-section img {
+  margin-top: -80px;
+  margin-right: 70px;
+  z-index: -1;
+}
+
+.name {
+  font-size: 150px;
+  font-weight: 300;
+  margin-right: -300px;
+  line-height: 140px;
+}
+
+.drop-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.drop-down h3 {
+  margin-left: 43px;
+  margin-bottom: -20px;
+  transform-origin: 0 0;
+  transform: rotate(270deg);
+  font-weight: 300;
+}
+
+.drop-down h3 a {
+  text-decoration: none;
+  color: rgb(201, 201, 201);
+}
+
+.drop-down-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.drop-down-1 h3 {
+  margin-left: 25px;
+  margin-bottom: -20px;
+  transform-origin: 0 0;
+  transform: rotate(270deg);
+  font-weight: 300;
+}
+
+.drop-down-1 h3 a {
+  text-decoration: none;
+  color: white;
+}
+
+.drop-down-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.drop-down-2 h3 {
+  margin-left: 45px;
+  margin-bottom: -20px;
+  transform-origin: 0 0;
+  transform: rotate(270deg);
+  font-weight: 300;
+}
+
+.drop-down-2 h3 a {
+  text-decoration: none;
+  color: white;
+}
+
+.card-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 100px;
+}
+.card-1 img {
+  margin-left: 150px;
+  border: 7px solid #ff4500;
+}
+.card-1 p {
+  padding: 0px 150px 0px 40px;
+  font-size: 25px;
+}
+.card-1-content h2 {
+  font-size: 50px;
+  font-weight: 500;
+  padding: 0px 0px 20px 40px;
+}
+.btn-1 {
+}
+
+.card-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 100px;
+}
+.card-2 img {
+  margin-right: 150px;
+  border: 7px solid #ff4500;
+}
+.card-2 p {
+  padding: 0px 40px 0px 150px;
+  font-size: 25px;
+  text-align: right;
+}
+.card-2-content {
+  text-align: right;
+}
+.card-2-content h2 {
+  font-size: 50px;
+  font-weight: 500;
+  padding: 0px 40px 20px 0px;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+}
+.about h1 {
+  font-family: "Jost", sans-serif;
+  font-weight: 900;
+  font-size: 100px;
+  color: orangered;
+  margin: 50px 0px 30px 100px;
+}
+
+.about p {
+  padding: 0px 150px;
+  font-size: 40px;
+}
+
+.left-image {
+  position: absolute;
+  margin-left: -50px;
+}
+.right-image {
+  position: absolute;
+  right: 0;
+  margin-top: 400px;
+  margin-right: -250px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+}
+
+.form-input-wrapper {
+  background: white;
+  padding: 45px 30px;
+}
+
+.form-input {
+  outline: none;
+  margin: 25px 0px;
+  font-size: 18px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: center;
+  padding: 40px 35px;
+  background: rgb(17, 17, 17);
+}
+
+.footer h4 {
+  font-weight: 300;
+  padding: 5px 0px;
+}
+.footer h4 a {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  margin: 8px 0px;
+  font-size: 15px;
+}
+
+.form-input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: transparent;
+}
+
+#msg-area {
+  resize: vertical;
+}
+
+.animated-button {
+  left: 0px;
+  bottom: 30px;
+  transition: 0.4s ease-in-out;
+}
+
+.animated-button a {
+  color: white;
+  position: relative;
+  display: inline-block;
+  padding: 7px 14px;
+  font-size: 14px;
+  border: 2px solid rgb(255, 123, 0);
+  text-decoration: none;
+  margin: 20px 40px 0px 40px;
+}
+
+.animated-button a:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 12px);
+  background: black;
+  transition: 0.5s ease-in-out;
+  transform: scaleY(1);
+}
+.animated-button a:hover:before {
+  transform: scaleY(0);
+}
+
+.animated-button a:after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% - 12px);
+  background: black;
+  transition: 0.5s ease-in-out;
+  transform: scaleX(1);
+}
+.animated-button a:hover:after {
+  transform: scaleX(0);
+}
+
+.animated-button a span {
+  position: relative;
+  z-index: 3;
+}
+
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+  margin-right: 10px;
+  content: "|";
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+  color: orangered;
+}
+
+.cl-effect-1 a::after {
+  margin-left: 10px;
+  content: "|";
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+  color: orangered;
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.btn {
+  border: none;
+  font-size: 20px;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 20px 40px;
+  display: inline-block;
+  font-weight: 600;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn::before {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-cart:before {
+  font-family: "FontAwesome";
+  font-weight: 900;
+  content: "\f061";
+}
+.btn-5 {
+  background: orangered;
+  color: #fff;
+  height: 10px;
+  width: 130px;
+  font-size: 15px;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.btn-5:active {
+  background: orangered;
+  top: 2px;
+}
+
+.btn-5 span {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s;
+  -webkit-backface-visibility: hidden;
+  -moz-transition: all 0.3s;
+  -moz-backface-visibility: hidden;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+.btn-5:before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 2.5;
+  font-size: 100%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-5:active:before {
+  color: orangered;
+}
+
+/* Button 5a */
+.btn-5a:hover span {
+  -webkit-transform: translateY(300%);
+  -moz-transform: translateY(300%);
+  -ms-transform: translateY(300%);
+  transform: translateY(300%);
+}
+
+.btn-5a:before {
+  left: 0;
+  top: -50%;
+}
+
+.btn-5a:hover:before {
+  top: 0;
+}
+
+/* Button 5b */
+.btn-5b:hover span {
+  -webkit-transform: translateX(200%);
+  -moz-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  transform: translateX(200%);
+}
+
+.btn-5b:before {
+  left: -100%;
+  top: 0;
+}
+
+.btn-5b:hover:before {
+  left: 0;
+}
